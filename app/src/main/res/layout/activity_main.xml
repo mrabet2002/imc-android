@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0CD9E8E7"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="#FEFEFE"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="108dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            tools:srcCompat="@drawable/logo" />
+
+        <LinearLayout
+            android:id="@+id/space"
+            android:layout_width="275dp"
+            android:layout_height="55dp"
+            android:background="#FEFEFE"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp"></LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/app_title"
+        android:textAlignment="gravity"
+        android:textAllCaps="false"
+        android:textColor="#009688"
+        android:textIsSelectable="false"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingHorizontal="30dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        app:cardMaxElevation="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="77dp"
+                android:layout_marginHorizontal="30dp"
+                android:orientation="vertical">
+                <!-- TextView for the unit -->
+                <TextView
+                    android:id="@+id/label1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="8dp"
+                    android:labelFor="@+id/weightInput"
+                    android:text="@string/poids_label" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/weightInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_input"
+                    android:paddingVertical="5dp"
+                    android:paddingHorizontal="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <!-- EditText for the value -->
+                        <EditText
+                            android:id="@+id/weightInputEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toStartOf="@id/weightUnit"
+                            android:background="@android:color/transparent"
+                            android:inputType="numberDecimal"
+                            android:paddingVertical="10dp"
+                            android:textColorHint="#6A000000"
+                            android:textSize="14sp"
+                            android:hint="@string/poids_hint" />
+
+                        <!-- TextView for the unit -->
+                        <TextView
+                            android:id="@+id/weightUnit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:paddingStart="8dp"
+                            android:text="@string/weight_unit" />
+
+                    </RelativeLayout>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:orientation="vertical">
+                <!-- TextView for the unit -->
+                <TextView
+                    android:id="@+id/label2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="8dp"
+                    android:labelFor="@+id/heightInput"
+                    android:text="@string/taille_label" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/heightInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_input"
+                    android:paddingVertical="5dp"
+                    android:paddingHorizontal="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <!-- EditText for the value -->
+                        <EditText
+                            android:id="@+id/heightInputEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toStartOf="@id/heightUnit"
+                            android:hint="@string/taille_hint"
+                            android:inputType="numberDecimal"
+                            android:paddingVertical="10dp"
+                            android:textColorHint="#6A000000"
+                            android:textSize="14sp" />
+
+                        <!-- TextView for the unit -->
+                        <TextView
+                            android:id="@+id/heightUnit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:paddingStart="8dp"
+                            android:text="@string/height_unit" />
+
+                    </RelativeLayout>
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="77dp"
+                android:layout_marginHorizontal="30dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingHorizontal="30dp">
+
+                <Button
+                    android:id="@+id/calcButton"
+                    android:layout_width="239dp"
+                    android:layout_height="37dp"
+                    android:background="@drawable/rounded_button"
+                    android:text="@string/confirm_btn"
+                    android:textColor="#F6F6F6"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/result_title"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:gravity="center"
+        android:text="@string/result_title"
+        android:textAlignment="gravity"
+        android:textAllCaps="false"
+        android:textColor="#009688"
+        android:textIsSelectable="false"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="170dp"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/card"
+        android:gravity="end"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:baselineAligned="false"
+            android:gravity="end|bottom"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/resultNumberLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end|bottom"
+                android:text="@string/imc_result"
+                android:textColor="#FF9800"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                tools:ignore="RtlCompat" />
+
+            <TextView
+                android:id="@+id/resultNumberRight"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:textAlignment="textEnd"
+                android:textColor="#7C8181"
+                android:text="@string/imc_result"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/resultImage"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            app:srcCompat="@drawable/normal" />
+    </LinearLayout>
+
+</LinearLayout>
